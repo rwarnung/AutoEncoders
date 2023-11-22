@@ -2,21 +2,21 @@
 ## orig: https://gradientdescending.com/pca-vs-autoencoders-for-dimensionality-reduction/
 
 library(tidyverse)
-library(plotly) ## fro 3D plots
+library(plotly) ## for 3D plots
 library(tictoc) ## for timing
 suppressPackageStartupMessages(library(keras)) ## neural network in keras (based on python)
 ## installation https://tensorflow.rstudio.com/install/
 
 library(dimRed) ## autoencoder based on keras
-library(torch) ## neural network in keras (based on C)
+library(torch) ## neural network in torch (based on C)
 
 data(ais, package="DAAG")
-
-####### PCA first #############
 
 # standardise
 minmax <- function(x) (x - min(x))/(max(x) - min(x))
 x_train <- apply(ais[,1:11], 2, minmax)
+
+####### PCA first #############
 
 # PCA
 pca <- prcomp(x_train)
