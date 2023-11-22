@@ -1,5 +1,5 @@
 ## from https://www.r-bloggers.com/2018/07/pca-vs-autoencoders-for-dimensionality-reduction/
-## orig: https://gradientdescending.com/page/3/
+## orig: https://gradientdescending.com/pca-vs-autoencoders-for-dimensionality-reduction/
 
 library(tidyverse)
 library(plotly) ## fro 3D plots
